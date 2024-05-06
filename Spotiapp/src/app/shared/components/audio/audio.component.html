@@ -1,0 +1,13 @@
+<div (click)="toggleAudio()">
+  @if(!audioPlaying){
+    <div class="play-button-overlay">
+      <img src="assets/images/play-button.svg" alt="Play"  height="50" width="50"  title="Reproducir">
+    </div>
+  }@else {
+    <div class="pause-button-overlay">
+      <img src="assets/images/pause-button-icon.svg" alt="Pause" height="50" width="50" title="Pausar">
+    </div>
+  }
+  <audio #audioPlayer [src]="audioSrc" preload="auto"></audio>
+</div>
+

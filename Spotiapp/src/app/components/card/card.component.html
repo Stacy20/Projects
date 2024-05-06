@@ -1,0 +1,19 @@
+<div class="card mb-2 text-white bg-dark" style="width: 18rem;" >
+  <!-- todo aqui se debe cambiar en el metodo el parametro -->
+  <lazy-image [url]="url" [audioSrc]="audioSrc" [typeCard]="typeCard" [ngClass]="{'clickable': typeCard === 0}" (click)="typeCard === 0 && pageAlbum()"></lazy-image>
+
+  <div class="card-body">
+    <!-- todo: cambiar el nombre del titulo en cuando llega el verdadero y en el parametro cambiarlo por el titulo del album -->
+    <h5 class="card-title" [routerLink]="['/albumArtist', this.idPage, idAlbum]" [title]="'Ir al álbum'" >{{this.title}}</h5>
+    <!-- todo: Aqui la lista real con sus debidos redirect, cambiar el href por que lo vamos a usar con elrouterlink -->
+    @if (listArtist.length>0) {
+      @for (artist of  listArtist; track $index) {
+        <a [routerLink]="['/topArtist', this.idPage, artist.id]"><span>{{artist.name}}</span> </a>
+        @if ($index+1 < listArtist.length) {
+          <span>, </span>
+        }
+      }
+    }
+
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="position-relative">
+  <!-- <img src="" class="card-img-top p-1" alt="Adele img"> -->
+  <img
+  [src]="url"
+  [alt]="alt"
+  (load)="onLoad()"
+  class="card-img-top p-1 animate__animated animate__fadeIn animate__slower"
+  [ngStyle]="{'display': hasLoaded ? '' : 'none'}"
+  [title]="typeCard === 0 ? 'Ir al álbum' : ''"
+  >
+  @if(hasLoaded && typeCard===1 && audioSrc!=='' && audioSrc!==undefined  && audioSrc!==null){
+    <shared-audio [audioSrc]="audioSrc"></shared-audio>
+  }
+
+</div>
+
+
+<!-- condicion ? valorIfTRUE : valorIfFALSE -->
+
+@if (!hasLoaded) {
+    <img src="assets/images/rings.svg"
+    alt="Loading"
+    height="35"
+    width="35"
+    class="mt-3"
+    >
+}

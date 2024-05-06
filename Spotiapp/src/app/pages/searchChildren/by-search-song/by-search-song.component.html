@@ -1,0 +1,9 @@
+@if (!flag) {
+  <div class="alert alert-warning">
+    No se han encontrado resultado para {{this.term}} <br>
+    Asegúrate de escribir las palabras de forma correcta o usa menos o distintas palabras
+  </div>
+}@else {
+
+<component-list-card [data]="songs" [typeCard]=1 [idPage]=1></component-list-card>
+}

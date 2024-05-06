@@ -1,0 +1,7 @@
+<select class="form-select" aria-label="Default select example" (change)="onSelectChange($event)" [(ngModel)]="value" >
+  <option selected disabled >Tipo de búsqueda </option>
+    @for (option of listOption; track $index) {
+      <option value={{$index}}>{{option}}</option>
+
+    }
+</select>

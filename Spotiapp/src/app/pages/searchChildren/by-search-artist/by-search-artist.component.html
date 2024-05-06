@@ -1,0 +1,12 @@
+<!-- <h1>{{albumes[0].name}}</h1> -->
+@if (!flag) {
+  <div class="alert alert-warning">
+    No se han encontrado resultado para {{this.term}} <br>
+    Asegúrate de escribir las palabras de forma correcta o usa menos o distintas palabras
+  </div>
+}@else {
+  <component-list-card [data]="null" [albumes]="albumes" [typeCard]=0 [idPage]=0> </component-list-card>
+
+}
+
+

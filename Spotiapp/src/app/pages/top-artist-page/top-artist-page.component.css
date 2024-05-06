@@ -1,0 +1,35 @@
+.imagen-circular {
+  width: 150px; /* Ajusta el tamaño del círculo según tus necesidades */
+  height: 150px; /* Ajusta el tamaño del círculo según tus necesidades */
+  border-radius: 50%; /* Hace que el borde sea redondeado, creando un círculo */
+  overflow: hidden; /* Asegura que la imagen no se salga del círculo */
+  /* margin: auto; Centra el círculo en la página */
+  position: relative;
+}
+
+.imagen-circular img {
+  width: 100%; /* Asegura que la imagen llene el círculo */
+  height: 100%; /* Hace que la imagen llene completamente el círculo */
+  object-fit: cover; /* Mantiene la relación de aspecto y cubre el contenedor */
+  display: block; /* Elimina el espacio adicional debajo de la imagen */
+  margin: auto; /* Centra la imagen dentro del círculo */
+}
+
+h3:visited{
+  text-decoration: none;
+}
+h3:hover {
+  text-decoration: underline;
+}
+h3:active {
+  text-decoration: underline;
+}
+h3{
+  color:#a39e9ec7
+}
+
+.myclass{
+  margin-left: 100px;
+  margin-right: 12px;
+  padding-left: 20px;
+}

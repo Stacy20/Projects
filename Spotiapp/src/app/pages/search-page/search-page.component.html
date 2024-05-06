@@ -1,0 +1,28 @@
+<div class="row mt-3">
+  <div class="col-3">
+    <shared-sidebar></shared-sidebar>
+  </div>
+  <div class="col mt-3">
+    <!-- todo: aqui va la lista de canciones -->
+    <div class="row">
+      <div class="col-6">
+        <shared-search-box [placeholder]="'Escriba el nombre de la canción o artista'" (onValue)="searchTerm($event)" [value]="term"></shared-search-box>
+      </div>
+      <div class="col-3">
+        <shared-select (idSelect)="saveOptionSearch($event)" [value]="this.optionSearch" ></shared-select>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col mt-3">
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
