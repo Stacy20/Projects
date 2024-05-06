@@ -1,0 +1,47 @@
+<div class="container">
+  <h2  class="mt-5">Opciones</h2>
+  <div class="row  mt-5">
+    <div class="col-12 col-lg-3 mb-lg-0 mb-2">
+      <button class="btn btn-dark me-2 " (click)="pageAddStudent()"> Agregar Estudiante</button>
+    </div>
+  </div>
+ <h2 class="mt-5"> Estudiantes</h2>
+  <div class="row d-flex justify-content-center mt-5 ">
+    <div class="col-11 table-responsive">
+      @if (loaded) {
+      <table datatable class="row-border hover">
+        <thead>
+          <tr>
+            <th>Carnet </th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of data; track $index) {
+          <tr>
+            <td>{{item.carnet}}</td>
+            <td> {{item.nombre}} </td>
+            <td>{{item.apellido}}</td>
+            <td>{{item.correo}}</td>
+            <td>
+              <div class="d-flex justify-content-between">
+              <button class="btn button1 m-2 m-lg-0" (click)="pageEditStudent(item.carnet)">Editar</button>
+              <button class="btn button2  m-2 m-lg-0" (click)="deleteStudent(item.carnet)">Eliminar</button>
+            </div>
+
+            </td>
+          </tr>
+
+          }
+        </tbody>
+
+        <!-- <script src="customer.js"></script> -->
+      </table>
+    }
+    </div>
+  </div>
+
+</div>

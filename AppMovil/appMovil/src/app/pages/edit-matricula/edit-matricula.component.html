@@ -1,0 +1,33 @@
+
+<div class="container mt-5">
+  <h1>Matricula de estudiante</h1>
+  <hr>
+  <div class="row mt-5 ">
+    <div class="col-12 d-flex">
+      <div class="col-5 col-lg-2">
+        <label  class="form-label">Seleccione al estudiante:</label>
+      </div>
+      <div class="col-6">
+        @if (data.length!=0) {
+          <app-select [list]="data" [type]="1" [selectedId]="studentSelect" (option)="obtenerEstudianteSeleccionado($event)"></app-select>
+        }
+
+      </div>
+    </div>
+    <div class="col-12 d-flex mt-5">
+      <div class="col-5 col-lg-2">
+        <label  class="form-label" >Seleccione el curso:</label>
+      </div>
+      <div class="col-6">
+        @if (cursos.length!=0) {
+        <app-select [list]="cursos" [type]="0" [selectedId]="courseSelect" (option)="obtenerCursoSeleccionado($event)"></app-select>
+        }
+      </div>
+    </div>
+
+      <div class="col-md-6 mt-5">
+        <button class="btn btn-success me-4" (click)="save()">Editar</button>
+
+    </div>
+  </div>
+</div>

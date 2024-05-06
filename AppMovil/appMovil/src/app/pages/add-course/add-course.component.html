@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <h1>Agregar curso</h1>
+  <hr>
+  <div class="row mt-5 ">
+    <div class="col-12 d-flex">
+      <div class="col-5 col-lg-2">
+        <label  class="form-label">Nombre:</label>
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" placeholder="Debe ingresar el nombre del curso"  [(ngModel)]="nombre">
+      </div>
+    </div>
+    <div class="col-12 d-flex mt-5">
+      <div class="col-5 col-lg-2">
+        <label  class="form-label" >Descripción:</label>
+      </div>
+      <div class="col-6">
+        <textarea  class="form-control" placeholder="Debe ingresar la descripción del curso" [(ngModel)]="descripcion"></textarea>
+      </div>
+    </div>
+
+      <div class="col-md-6 mt-5">
+        <button class="btn btn-success me-4" (click)="save()">Agregar</button>
+
+    </div>
+  </div>
+</div>

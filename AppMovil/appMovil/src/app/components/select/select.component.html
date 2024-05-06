@@ -1,0 +1,24 @@
+@if (type==0) {
+  <div class="select-container d-flex">
+    <input type="text" class="form-control" placeholder="Buscar coincidencia" [(ngModel)]="searchTerm"
+      (keyup)="filterOptionsCourses()">
+    <select class="form-select" aria-label="Buscar por marca" (change)="onSelectChange($event)" [(ngModel)]="selectedId">
+      <option selected disabled hidden value="">Seleccionar curso</option>
+      @for (option of filteredList; track $index) {
+      <option value={{option.id_curso}}>{{option.id_curso}} {{option.nombre_curso}}</option>
+      }
+    </select>
+  </div>
+}@else {
+  <div class="select-container d-flex">
+    <input type="text" class="form-control" placeholder="Buscar coincidencia" [(ngModel)]="searchTerm"
+      (keyup)="filterOptions()">
+    <select class="form-select" aria-label="Buscar por marca" (change)="onSelectChange($event)" [(ngModel)]="selectedId">
+      <option selected disabled hidden value="">Seleccionar estudiante</option>
+      @for (option of filteredList; track $index) {
+      <option value={{option.id_estudiante}}>{{option.carnet}} {{option.nombre}} {{option.apellido}}</option>
+      }
+    </select>
+  </div>
+
+}

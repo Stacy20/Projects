@@ -1,0 +1,54 @@
+.select-container {
+  position: relative;
+  display: inline-block;
+}
+
+.select-container select {
+  appearance: none;
+  -webkit-appearance: none; /* Para navegadores WebKit como Chrome y Safari */
+  -moz-appearance: none; /* Para Firefox */
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #495057;
+  cursor: pointer;
+}
+
+.select-container input[type="text"] {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 16px;
+  width: calc(100% - 26px); /* Resta el ancho del borde y el padding del select */
+  box-sizing: border-box;
+  margin-right: -1px; /* Alinea el borde derecho del input con el borde izquierdo del select */
+}
+
+.select-container input[type="text"]:focus,
+.select-container select:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.select-container input[type="text"]::placeholder {
+  color: #6c757d;
+}
+
+.select-container select:hover,
+.select-container input[type="text"]:hover {
+  border-color: #b8b8b8;
+}
+
+.select-container select option {
+  background-color: #fff;
+  color: #495057;
+}
+
+.select-container select option:hover {
+  background-color: #f8f9fa;
+}
